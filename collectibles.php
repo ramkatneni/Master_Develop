@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'head.php';?>
-<link href="css/Collectibles.css" rel="stylesheet">
 <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+<?php include 'head.php';?>
 </head>
 <body id="page-top">
 <?php include 'navigation.php';?>
@@ -19,7 +18,6 @@
 
 </div>
 <?php include 'footer.php';?>
-<?php include 'page/docker.php';?>
 
 
 </body>

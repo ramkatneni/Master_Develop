@@ -2,8 +2,6 @@
 <html>
 <head>
 <?php include 'head.php';?>
-<link href="css/component.css" rel="stylesheet">
-<link href="css/detail.css" rel="stylesheet">
 
 </head>
 <body>

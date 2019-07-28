@@ -20,7 +20,6 @@
 			</header>
 			
 		</div>
-		<?php include 'docker.php';?>
 		</div>
 	</div>
 		<!-- /page_ideas&Experiments -->

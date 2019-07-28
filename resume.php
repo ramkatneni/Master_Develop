@@ -18,6 +18,5 @@
 </div>
 
 <?php include 'footer.php';?>
-<?php include 'page/docker.php';?>
 </body>
 
