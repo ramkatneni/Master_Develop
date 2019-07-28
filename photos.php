@@ -3,8 +3,9 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="css/base.css" />
-<?php include 'head.php';?>
+
 <link href="css/photos/photos.css" rel="stylesheet">
+<?php include 'head.php';?>
 
 			<style>
 			.js .grid__item-wrap,.js .grid__item-year,.js .grid__item-title {

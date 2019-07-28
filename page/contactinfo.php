@@ -613,7 +613,6 @@ if(parent==top) {
 }
 </script>
 
-			<?php include 'docker.php';?>
 			</div>
 			</div>
 		</div>

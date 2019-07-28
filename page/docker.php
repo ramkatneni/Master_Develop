@@ -127,3 +127,14 @@ opacity: .9;
  </div>
 </div>
 </div>
+
+<script>
+//menu-button
+
+$(document).ready(function(){
+  $("#openMenuBtn").click(function(){
+	  console.log("goto menu");
+	  $(".menu-button").click();
+  });
+});
+</script>

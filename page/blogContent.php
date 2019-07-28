@@ -402,7 +402,6 @@ div {
                     </div>
                 </div>
             </span>
-            <?php include 'docker.php';?> 
         </div>
     </div>
 </div>
