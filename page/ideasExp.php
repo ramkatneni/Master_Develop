@@ -1,4 +1,4 @@
-	
+
 	<!-- page_ideas&Experiments -->
 	<div class="page" id="page-custom">
 		<div class="window">
@@ -13,12 +13,7 @@
       <div class="contentArea">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Ideas &amp; Experiments</h1>
-				
-				<p class="info">
-					"You have to make a conscious decision to change for your own well-being, that of your family and your country." &mdash;Bill Clinton
-				</p>
 			</header>
-			
 		</div>
 		</div>
 	</div>
