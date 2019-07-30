@@ -259,7 +259,7 @@ div {
 
                     <div class="entry-content flex flex-column justify-content-between align-items-start">
                         <header>
-                            <h3><a href="blog/single-standard.html"  class="searchStr">The inside spring!</a></h3>
+                            <h3><a href="blog/single-standard.php"  class="searchStr">The inside spring!</a></h3>
 
                             <div class="posted-by">Ram Katneni</div>
                         </header>
