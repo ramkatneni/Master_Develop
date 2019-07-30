@@ -259,7 +259,7 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -934,7 +934,7 @@ textarea {
 
 .title {
     font-weight: 500;
-    font-size: 0.8em !important;
+    font-size: 1.1em;
 }
 
 .trafficLights {
