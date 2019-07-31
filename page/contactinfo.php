@@ -13,30 +13,30 @@
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Contact</h1>
 			</header>
-	<div class="iphone">
+	<div class="Framer">
   <div class="border">
-    <form class="chat">
+    <form class="chat" id="tform">
       <span></span>
       <div class="messages" id="adobewordpress">
         <div class="message hide" id="msg2">
           <div class="fromThem">
             <p>Hello!</p>
-            <date id="dateval">03/08/2019 14:31:22</date>
+            <date id="dateval"></date>
           </div>
         </div>
         <div class="message hide" id="msg5">
           <div class="fromThem">
             <p>Thanks for visiting my website.</p>
-            <date id="dateval">03/08/2019 14:37:12</date>
+            <date id="dateval"></date>
           </div>
         </div>
 		<div class="message hide" id="msg6">
           <div class="fromThem">
             <p>If you wanna say something put your name and email.</p>
-            <date id="dateval">03/08/2019 14:37:12</date>
+            <date id="dateval"></date>
           </div>
         </div>
-        
+
 	<div class="message hide" id="buffermsg">
   <div class="bubble" >
 		<div class="bubble__circle"></div>
@@ -52,15 +52,20 @@
 	  </div>
 	</div>
       </div>
-	  
-      <input type="text" placeholder="Message">
-      <input type="submit" value="Send">
+			<input type="text" placeholder="Message" style="border-radius: 5em;width:100%"/>
+	      <i class="fa fa-arrow-circle-up"  onclick="submitform()" style="
+	    font-size: 35px;
+	    vertical-align: middle;
+	    color: #3d6ad4;
+	    margin-left: -45px;
+	    margin-top: 2px;
+	    " aria-hidden="true"></i>
     </form>
   </div>
 </div>
 
 <style>
-.msgbuble{ 
+.msgbuble{
 	position:relative;
 	display:flex;
 	padding:8px !important;
@@ -89,7 +94,7 @@ form.chat {
   -khtml-user-select: none;    /* Konqueror */
   -moz-user-select: none;      /* Firefox */
   -ms-user-select: none;       /* IE/Edge */
-  user-select: none;   
+  user-select: none;
 }
 
 form.chat span.spinner{
@@ -113,13 +118,13 @@ form.chat .messages{
   height:90%;
   width:100%;
   padding:2% 3%;
-  border-bottom:1px solid #ecf0f1;
+
 }
 
 form.chat ::-webkit-scrollbar {width: 3px; height:1px;transition:all .5s;z-index:10;}
 form.chat ::-webkit-scrollbar-track {background-color: white;}
 form.chat ::-webkit-scrollbar-thumb {
-  background-color: #bec4c8; 
+  background-color: #bec4c8;
   border-radius:3px;
 }
 
@@ -201,8 +206,8 @@ form.chat .myMessage:after {
 }
 
 form.chat .fromThem {
-  background: #E5E5EA;
-  color: black;
+	background: #56565a;
+  color: white;
   float: left;
   clear:both;
   border-bottom-left-radius: 30px 0px\9;
@@ -210,11 +215,11 @@ form.chat .fromThem {
 form.chat .fromThem:before {
   content: "";
   position: absolute;
- 
+
   bottom: -2px;
   left: -7px;
   height: 19px;
-  border-left: 20px solid #E5E5EA;
+  border-left: 20px solid #56565a;
   border-bottom-right-radius: 16px 14px;
   -webkit-transform: translate(0, -2px);
   transform: translate(0, -2px);
@@ -277,7 +282,7 @@ form.chat input[type='submit']{
   form.chat .myMessage,form.chat .fromThem{
     font-size: 19px;
   }
-  
+
   form.chat .message:hover .myMessage{
     transform: translateY(-18px);
     -webkit-transform: translateY(-18px);
@@ -287,19 +292,19 @@ form.chat input[type='submit']{
     transform: translateY(-18px);
     -webkit-transform: translateY(-18px);
   }
-  
+
   form.chat .myMessage date,form.chat .fromThem date {
     top: 47px;
     left:auto;
     right:0;
     font-size:12px;
   }
-  
+
   form.chat .myMessage,
   form.chat .fromThem {
     max-width: 90%;
   }
-  
+
 @-moz-keyframes loading-bar {
   0% {
     width: 0%;
@@ -336,7 +341,7 @@ form.chat input[type='submit']{
   }
 }
 
-.iphone{
+.Framer{
 	height:100%;
   min-height:700px;
   background-size:100% 100%;
@@ -361,80 +366,6 @@ a.article{
   border-radius: 25px;
   font: 400 15px 'Open Sans', sans-serif;
 }
-
-
-/*
-
-@-webkit-keyframes fade_in_out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade_in_out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.bubble {
-  display: flex;
-  position: relative;
-  width: 125px;
-  height: 75px;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 75px;
-  background-color: #ddd;
-}
-.bubble::before, .bubble::after {
-  position: absolute;
-  content: '';
-  background: #ddd;
-  border-radius: 100%;
-}
-.bubble::before {
-  bottom: 0;
-  left: -6px;
-  width: 25px;
-  height: 25px;
-}
-.bubble::after {
-  bottom: -5px;
-  left: -18px;
-  width: 12.5px;
-  height: 12.5px;
-}
-
-.bubble__circle {
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  background-color: #bbb;
-  -webkit-animation: fade_in_out 1.5s infinite;
-          animation: fade_in_out 1.5s infinite;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-.bubble__circle:first-of-type {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-.bubble__circle:last-of-type {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-*/
 @-webkit-keyframes fade_in_out {
   0% {
     opacity: 1;
@@ -537,11 +468,11 @@ function getCurrDate(){
 	  d.getFullYear() + '  ' + clock;
 	return currentDate;
  }
-	 
+
 function mysleep(id,sec,flag){
-	setTimeout(function(){ 
+	setTimeout(function(){
 	if(flag){
-		setTimeout(function(){ 
+		setTimeout(function(){
 		$("#buffermsg").removeClass("hide");
 		}, 700);
 	}else{
@@ -549,26 +480,26 @@ function mysleep(id,sec,flag){
 	}
 	if(id != ""){
 		$("#"+id+" #dateval").text(getCurrDate());
-		$("#"+id).removeClass("hide"); 
+		$("#"+id).removeClass("hide");
 	}
 	}, sec*1000);
 }
- 
+
   mysleep("msg2",1,false);
    mysleep("",1.5,true);
  	 mysleep("msg5",4,false);
 	 mysleep("",4.5,true);
  	 mysleep("msg6",8,false);
-	 
-	 
+
+
 
 function mailme(msg){
 	//http://ram.udesign.online/mail.php
-	 $.post('mail.php', { message: msg}, 
+	 $.post('mail.php', { message: msg},
     function(returnedData){
          console.log(returnedData);
 });
-	
+
 }
 
 function scrollDown() {
@@ -582,8 +513,7 @@ $("input").keypress(function(event) {
     $('form.chat input[type="submit"]').click();
   }
 });
-$('form.chat input[type="submit"]').click(function(event) {
-  event.preventDefault();
+function submitform(){
   var message = $('form.chat input[type="text"]').val();
   if ($('form.chat input[type="text"]').val()) {
     var d = new Date();
@@ -605,7 +535,7 @@ $('form.chat input[type="submit"]').click(function(event) {
   $('form.chat input[type="text"]').val('');
   scrollDown();
   mailme(message);
-});
+}
 
 
 if(parent==top) {
