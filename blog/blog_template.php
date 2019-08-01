@@ -9,18 +9,18 @@
 	<meta name="description" content="Naresh Katneni: iPod collectible portfolio" />
 	<meta name="keywords" content="apple, iPod, music, collectible, art, applefan, stevejobs, applenews, iphone" />
 	<link rel="shortcut icon" href="favicon.ico">
-	
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="../css/detail.css" />
 	<link rel="stylesheet" type="text/css" href="../css/quotes.css" />
     <link rel="stylesheet" type="text/css" href="../css/component.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/main.css" />
 	<script src="../js/modernizr-custom.js"></script>
-	<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" 
+	<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular"
 rel="stylesheet" type="text/css">
 <script>
             function goBack() {
@@ -34,14 +34,14 @@ rel="stylesheet" type="text/css">
             right: 0;
             z-index: 600;
         }
-        
+
         .fa-arrow-left,
         .fa-arrow-up {
             color: white;
             font-size: 60px;
             margin: 15px;
         }
-        
+
         .fa-arrow-left:hover,
         .fa-arrow-up:hover {
             color: #f73378;
@@ -49,7 +49,8 @@ rel="stylesheet" type="text/css">
 
             .tooltip .tooltiptext {
                 visibility: hidden;
-                width: 120px;
+								width: 97px;
+                font-size: 15px;
                 background-color: #fff;
                 color: black;
                 text-align: center;
@@ -62,12 +63,12 @@ rel="stylesheet" type="text/css">
                 margin-left: -92px;
                 margin-bottom: 5px;
             }
-            
+
             .tooltip:hover .tooltiptext {
                 visibility: visible;
             }
-       
-            
+
+
             .icon {
                 position: absolute;
                 top: 24px;
@@ -78,7 +79,7 @@ rel="stylesheet" type="text/css">
                 -webkit-animation: anim-icon 2.8s ease infinite;
                 animation: anim-icon 2.8s ease infinite;
             }
-            
+
             .icon:before,
             .icon:after {
                 content: "";
@@ -89,19 +90,19 @@ rel="stylesheet" type="text/css">
                 position: absolute;
                 transition: 1s;
             }
-            
+
             .icon:before {
                 top: -24px;
                 -webkit-animation: anim-before 2.8s ease infinite;
                 animation: anim-before 2.8s ease infinite;
             }
-            
+
             .icon:after {
                 bottom: -24px;
                 -webkit-animation: anim-after 2.8s ease infinite;
                 animation: anim-after 2.8s ease infinite;
             }
-            
+
             @-webkit-keyframes anim-before {
                 0% {
                     width: 60px;
@@ -129,7 +130,7 @@ rel="stylesheet" type="text/css">
                     transform: rotate(0) translate(0, 0);
                 }
             }
-            
+
             @keyframes anim-before {
                 0% {
                     width: 60px;
@@ -157,7 +158,7 @@ rel="stylesheet" type="text/css">
                     transform: rotate(0) translate(0, 0);
                 }
             }
-            
+
             @-webkit-keyframes anim-after {
                 0% {
                     width: 60px;
@@ -185,7 +186,7 @@ rel="stylesheet" type="text/css">
                     transform: rotate(0) translate(0, 0);
                 }
             }
-            
+
             @keyframes anim-after {
                 0% {
                     width: 60px;
@@ -213,7 +214,7 @@ rel="stylesheet" type="text/css">
                     transform: rotate(0) translate(0, 0);
                 }
             }
-            
+
             @-webkit-keyframes anim-icon {
                 0% {
                     -webkit-transform: rotate(0);
@@ -236,7 +237,7 @@ rel="stylesheet" type="text/css">
                     transform: rotate(360deg);
                 }
             }
-            
+
             @keyframes anim-icon {
                 0% {
                     -webkit-transform: rotate(0);

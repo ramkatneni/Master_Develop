@@ -389,18 +389,19 @@ a.article{
   }
 }
 .bubble {
-  display: flex;
-    position: relative;
-    width: 66px;
-    /* height: 75px; */
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 75px;
-    background-color: #ddd;
-    padding: 10px 0px;
-  float: left;
-    clear: both;
-}
+	    display: flex;
+	    position: relative;
+	    width: 59px;
+	    margin-top: -15px;
+	    right: -10px;
+	    align-items: center;
+	    justify-content: space-around;
+	    border-radius: 75px;
+	    background-color: #ddd;
+	    padding: 12px 0px;
+	    float: left;
+	    clear: both;
+	}
 .bubble::before, .bubble::after {
   position: absolute;
   content: '';
