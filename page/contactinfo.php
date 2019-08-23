@@ -52,14 +52,22 @@
 	  </div>
 	</div>
       </div>
-			<input type="text" placeholder="Message" style="border-radius: 5em;width:100%"/>
+	  <i class="fa fa-camera"  onclick="uploadform()" style="
+	    font-size: 35px;
+	    vertical-align: middle;
+	    color: #3d6ad4;
+	    margin: 5px;
+		float:left;
+	    " aria-hidden="true"></i>
+			<input type="text" placeholder="Message" style="border-radius: 5em;"/>
 	      <i class="fa fa-arrow-circle-up"  onclick="submitform()" style="
 	    font-size: 35px;
 	    vertical-align: middle;
 	    color: #3d6ad4;
-	    margin-left: -45px;
-	    margin-top: 2px;
+	    margin-left: -40px;
+	    margin-top: 4px;
 	    " aria-hidden="true"></i>
+		
     </form>
   </div>
 </div>
@@ -513,6 +521,9 @@ $("input").keypress(function(event) {
     $('form.chat input[type="submit"]').click();
   }
 });
+function uploadform(){
+
+}
 function submitform(){
   var message = $('form.chat input[type="text"]').val();
   if ($('form.chat input[type="text"]').val()) {
