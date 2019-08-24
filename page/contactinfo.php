@@ -13,6 +13,16 @@
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Contact</h1>
 			</header>
+      <div style="display:none">
+        <!-- <form name="uploadform1" id="uploadform1" action="api/fileupload.php"  method="post"  enctype="multipart/form-data">
+    <input type="file" name="fileToUpload" onchange="uploadfile()" id="fileToUpload">
+  </form> -->
+        <form action="api/fileupload.php" name="uploadform1" id="uploadform1" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload"  onchange="uploadfile()"/>
+            <input type="submit" value="Upload Image" name="submit" name="submitbtn" id="submitbtn" />
+        </form>
+</div>
 	<div class="Framer">
   <div class="border">
     <form class="chat" id="tform">
@@ -522,8 +532,30 @@ $("input").keypress(function(event) {
   }
 });
 function uploadform(){
+	$("#fileToUpload").click();
+}
+function uploadfile(){
+	$("#submitbtn").click();
 
 }
+// this is the id of the form
+$("#uploadform1").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+console.log("Form submit stoped");
+    var form = $(this);
+    $.ajax({
+           type: "POST",
+           url: 'api/fileupload.php',
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               console.log(data); // show response from the php script.
+           }
+         });
+
+
+});
 function submitform(){
   var message = $('form.chat input[type="text"]').val();
   if ($('form.chat input[type="text"]').val()) {
