@@ -538,20 +538,42 @@ function uploadfile(){
 	$("#submitbtn").click();
 
 }
+
 // this is the id of the form
 $("#uploadform1").submit(function(e) {
 
     e.preventDefault(); // avoid to execute the actual submit of the form.
 console.log("Form submit stoped");
-    var form = $(this);
+    var form = $(this)[0];
+     // Get form
+     //   var form = $('#fileUploadForm')[0];
+
+    // Create an FormData object 
+        var data = new FormData(form);
     $.ajax({
            type: "POST",
+           enctype: 'multipart/form-data',
            url: 'api/fileupload.php',
-           data: form.serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               console.log(data); // show response from the php script.
-           }
+          // data: form.serialize(), // serializes the form's elements.
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+                $("#result").text(data);
+                console.log("SUCCESS : ", data);
+                $("#btnSubmit").prop("disabled", false);
+
+            },
+            error: function (e) {
+
+                $("#result").text(e.responseText);
+                console.log("ERROR : ", e);
+                $("#btnSubmit").prop("disabled", false);
+
+            }
          });
 
 

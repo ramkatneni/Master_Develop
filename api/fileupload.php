@@ -2,17 +2,17 @@
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-echo $target_file;
+//echo $target_file;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-echo $imageFileType;
+//echo "\n".$imageFileType;
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"]) && isset($_FILES['fileToUpload'])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+        //echo "\nFile is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        //echo "\nFile is not an image.";
         $uploadOk = 0;
     }
 }
