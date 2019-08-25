@@ -538,7 +538,7 @@ function uploadfile(){
 	$("#submitbtn").click();
 
 }
-
+var fileName;
 // this is the id of the form
 $("#uploadform1").submit(function(e) {
 
@@ -547,7 +547,7 @@ console.log("Form submit stoped");
     var form = $(this)[0];
      // Get form
      //   var form = $('#fileUploadForm')[0];
-
+    fileName = form.elements[0].files[0].name;
     // Create an FormData object 
         var data = new FormData(form);
     $.ajax({
@@ -561,7 +561,7 @@ console.log("Form submit stoped");
             cache: false,
             timeout: 600000,
             success: function (data) {
-
+                addImageToChat();
                 $("#result").text(data);
                 console.log("SUCCESS : ", data);
                 $("#btnSubmit").prop("disabled", false);
@@ -575,9 +575,25 @@ console.log("Form submit stoped");
 
             }
          });
-
-
 });
+function addImageToChat(){
+    var d = new Date();
+    var clock = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    var currentDate =
+      (('' + month).length < 2 ? '0' : '') + month + '/' +
+      (('' + day).length < 2 ? '0' : '') + day + '/' +
+      d.getFullYear() + '&nbsp;&nbsp;' + clock;
+    $('form.chat div.messages').append('<div class="message"><div class="myMessage"><div><img src="api/uploads/' + fileName + '" style="width:100px;height:100px;"></div><div style="position:relative;"><date style="top:15px;">' + currentDate + '</date></div></div></div>');
+    setTimeout(function() {
+      $('form.chat > span').addClass('spinner');
+    }, 100);
+    setTimeout(function() {
+      $('form.chat > span').removeClass('spinner');
+    }, 2000);
+    scrollDown();
+}
 function submitform(){
   var message = $('form.chat input[type="text"]').val();
   if ($('form.chat input[type="text"]').val()) {
