@@ -1,1 +1,0 @@
-This is the location where files are uploaded

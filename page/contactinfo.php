@@ -585,7 +585,7 @@ function addImageToChat(){
       (('' + month).length < 2 ? '0' : '') + month + '/' +
       (('' + day).length < 2 ? '0' : '') + day + '/' +
       d.getFullYear() + '&nbsp;&nbsp;' + clock;
-    $('form.chat div.messages').append('<div class="message"><div class="myMessage"><div><img src="api/uploads/' + fileName + '" style="width:100px;height:100px;"></div><div style="position:relative;"><date style="top:15px;">' + currentDate + '</date></div></div></div>');
+    $('form.chat div.messages').append('<div class="message"><div class="myMessage"><div><img src="uploads/' + fileName + '" style="width:100px;height:100px;"></div><div style="position:relative;"><date style="top:15px;">' + currentDate + '</date></div></div></div>');
     setTimeout(function() {
       $('form.chat > span').addClass('spinner');
     }, 100);
