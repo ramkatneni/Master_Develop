@@ -32,7 +32,7 @@
       padding: 5px 0;
     margin-top: -95px;
     margin-left: 30px;
-     
+
 }
 .tooltip.top .tooltip-arrow {
     bottom: 0;
@@ -49,14 +49,15 @@
     border-style: solid;
 }
 .tooltip-inner {
-  max-width: 200px;
-    padding: 3px 8px;
-    color: black;
-    text-align: center;
-    background-color: white;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: bold;
+      margin-top: -18px;
+      max-width: 200px;
+      padding: 4px 15px;
+      color: black;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: bold;
 }
 .tooltipwrap:hover .tooltip{
 opacity: .9;
@@ -67,60 +68,60 @@ opacity: .9;
  <div id="dock">
    <ul>
       <li  id="openMenuBtn"  class="tooltipwrap">
-        
+
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Menu</div></div>
         <a href="#"  ><img src="icons/menu.svg"></a>
       </li>
       <li id="galarySlide"   class="tooltipwrap">
-        
+
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Photos</div></div>
       <!--  <span id="rcorners">Photos</span>-->
         <a href="photos.php"><img src="icons/photos.svg"></a>
       </li>
      <li  class="tooltipwrap">
-       
+
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Message</div></div>
-     
+
         <a href="contact.php"><img src="icons/message.jpg"/></a>
      </li>
       <li  class="tooltipwrap">
-      
+
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Blog</div></div>
       <a href="blog.php"><img src="icons/Blog.svg"/></a>
       </li>
       <li  class="tooltipwrap">
-        
+
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Resume</div></div>
         <a href="Resume.php"><img src="icons/Resume.svg"/></a>
       </li>
        <li  class="tooltipwrap">
-       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Github</div></div>
-       
+       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Mail</div></div>
+
         <a href="#"><img src="icons/github.svg"/></a>
       </li>
         <li  class="tooltipwrap">
         <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">iTunes</div></div>
-       
+
         <a href="https://musi.sh/browse" target="_blank"><img src="icons/iTunes.svg"/></a>
       </li>
       <li  class="tooltipwrap">
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Spotify</div></div>
-       
+
         <a href="#" target="_blank"><img src="icons/Spotify.svg"/></a>
       </li>
       <li  class="tooltipwrap">
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Snapchat</div></div>
-      
+
         <a href="images/snapcode.jpeg" target="_blank"><img src="icons/Snapchat.svg"></a>
       </li>
       <li  class="tooltipwrap">
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Instagram</div></div>
-        
+
          <a href="https://www.instagram.com/ram_katneni" target="_blank"><img src="icons/instagram.svg"/></a>
       </li>
       <li  class="tooltipwrap">
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Trash</div></div>
-         
+
          <a href="#"><img src="icons/trashempty.ico"/></a>
       </li>
    </ul>
