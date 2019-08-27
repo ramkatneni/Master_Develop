@@ -13,6 +13,16 @@
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Contact</h1>
 			</header>
+      <div style="display:none">
+        <!-- <form name="uploadform1" id="uploadform1" action="api/fileupload.php"  method="post"  enctype="multipart/form-data">
+    <input type="file" name="fileToUpload" onchange="uploadfile()" id="fileToUpload">
+  </form> -->
+        <form action="api/fileupload.php" name="uploadform1" id="uploadform1" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload"  onchange="uploadfile()"/>
+            <input type="submit" value="Upload Image" name="submit" name="submitbtn" id="submitbtn" />
+        </form>
+</div>
 	<div class="Framer">
   <div class="border">
     <form class="chat" id="tform">
@@ -52,14 +62,22 @@
 	  </div>
 	</div>
       </div>
-			<input type="text" placeholder="Message" style="border-radius: 5em;width:100%"/>
+	  <i class="fa fa-camera"  onclick="uploadform()" style="
+	    font-size: 35px;
+	    vertical-align: middle;
+	    color: #3d6ad4;
+	    margin: 5px;
+		float:left;
+	    " aria-hidden="true"></i>
+			<input type="text" placeholder="Message" style="border-radius: 5em;"/>
 	      <i class="fa fa-arrow-circle-up"  onclick="submitform()" style="
 	    font-size: 35px;
 	    vertical-align: middle;
 	    color: #3d6ad4;
-	    margin-left: -45px;
-	    margin-top: 2px;
+	    margin-left: -40px;
+	    margin-top: 4px;
 	    " aria-hidden="true"></i>
+		
     </form>
   </div>
 </div>
@@ -514,6 +532,69 @@ $("input").keypress(function(event) {
     $('form.chat input[type="submit"]').click();
   }
 });
+function uploadform(){
+	$("#fileToUpload").click();
+}
+function uploadfile(){
+	$("#submitbtn").click();
+
+}
+var fileName;
+// this is the id of the form
+$("#uploadform1").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+console.log("Form submit stoped");
+    var form = $(this)[0];
+     // Get form
+     //   var form = $('#fileUploadForm')[0];
+    fileName = form.elements[0].files[0].name;
+    // Create an FormData object 
+        var data = new FormData(form);
+    $.ajax({
+           type: "POST",
+           enctype: 'multipart/form-data',
+           url: 'api/fileupload.php',
+          // data: form.serialize(), // serializes the form's elements.
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+                addImageToChat();
+                $("#result").text(data);
+                console.log("SUCCESS : ", data);
+                $("#btnSubmit").prop("disabled", false);
+
+            },
+            error: function (e) {
+
+                $("#result").text(e.responseText);
+                console.log("ERROR : ", e);
+                $("#btnSubmit").prop("disabled", false);
+
+            }
+         });
+});
+function addImageToChat(){
+    var d = new Date();
+    var clock = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    var currentDate =
+      (('' + month).length < 2 ? '0' : '') + month + '/' +
+      (('' + day).length < 2 ? '0' : '') + day + '/' +
+      d.getFullYear() + '&nbsp;&nbsp;' + clock;
+    $('form.chat div.messages').append('<div class="message"><div class="myMessage"><div><img src="uploads/' + fileName + '" style="width:100px;height:100px;"></div><div style="position:relative;"><date style="top:15px;">' + currentDate + '</date></div></div></div>');
+    setTimeout(function() {
+      $('form.chat > span').addClass('spinner');
+    }, 100);
+    setTimeout(function() {
+      $('form.chat > span').removeClass('spinner');
+    }, 2000);
+    scrollDown();
+}
 function submitform(){
   var message = $('form.chat input[type="text"]').val();
   if ($('form.chat input[type="text"]').val()) {
