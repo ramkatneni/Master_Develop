@@ -23,7 +23,7 @@
             <input type="submit" value="Upload Image" name="submit" name="submitbtn" id="submitbtn" />
         </form>
 </div>
-	<div class="Framer">
+	<div class="Framer upload-area">
   <div class="border">
     <form class="chat" id="tform">
       <span></span>
@@ -407,19 +407,18 @@ a.article{
   }
 }
 .bubble {
-	    display: flex;
-	    position: relative;
-	    width: 59px;
-	    margin-top: -15px;
-	    right: -10px;
-	    align-items: center;
-	    justify-content: space-around;
-	    border-radius: 75px;
-	    background-color: #ddd;
-	    padding: 12px 0px;
-	    float: left;
-	    clear: both;
-	}
+  display: flex;
+    position: relative;
+    width: 66px;
+    /* height: 75px; */
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 75px;
+    background-color: #ddd;
+    padding: 10px 0px;
+  float: left;
+    clear: both;
+}
 .bubble::before, .bubble::after {
   position: absolute;
   content: '';
@@ -544,13 +543,11 @@ var fileName;
 $("#uploadform1").submit(function(e) {
 
     e.preventDefault(); // avoid to execute the actual submit of the form.
-console.log("Form submit stoped");
+    console.log("Form submit stoped");
     var form = $(this)[0];
-     // Get form
-     //   var form = $('#fileUploadForm')[0];
-    fileName = form.elements[0].files[0].name;
+     fileName = form.elements[0].files[0].name;
     // Create an FormData object 
-        var data = new FormData(form);
+    var data = new FormData(form);
     $.ajax({
            type: "POST",
            enctype: 'multipart/form-data',
@@ -619,6 +616,39 @@ function submitform(){
   mailme(message);
 }
 
+
+
+    // preventing page from redirecting
+    $("html").on("dragover", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("#dragtxt").text("Drag here");
+    });
+
+    $("html").on("drop", function(e) { e.preventDefault(); e.stopPropagation(); });
+
+    // Drag enter
+    $('.upload-area').on('dragenter', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    // Drag over
+    $('.upload-area').on('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    // Drop
+    $('.upload-area').on('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var file = e.originalEvent.dataTransfer.files;
+        console.log(file);
+        var x =$('#fileToUpload')
+        x[0].files = file;
+        uploadfile();
+    });
 
 if(parent==top) {
   $('a.article').show();
