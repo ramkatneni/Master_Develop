@@ -4,64 +4,6 @@
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-
-.tooltip{
-    position: absolute;
-    z-index: 1070;
-    display: block;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.42857143;
-    line-break: auto;
-    text-align: left;
-    text-align: start;
-    text-decoration: none;
-    text-shadow: none;
-    text-transform: none;
-    letter-spacing: normal;
-    word-break: normal;
-    word-spacing: normal;
-    word-wrap: normal;
-    white-space: normal;
-    font-size: 12px;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    }
-    .tooltip.top {
-      padding: 5px 0;
-    margin-top: -95px;
-    margin-left: 30px;
-
-}
-.tooltip.top .tooltip-arrow {
-    bottom: 0;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px 5px 0;
-    border-top-color: white;
-}
-.tooltip-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-}
-.tooltip-inner {
-      margin-top: -18px;
-      max-width: 200px;
-      padding: 4px 15px;
-      color: black;
-      text-align: center;
-      background-color: white;
-      border-radius: 5px;
-      font-size: 15px;
-      font-weight: bold;
-}
-.tooltipwrap:hover .tooltip{
-opacity: .9;
-}
 </style>
 <div id="dockmaincontainer">
 <div id="dock-container">
