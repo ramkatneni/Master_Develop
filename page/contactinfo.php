@@ -1,14 +1,7 @@
 	<!-- page_Contact -->
-	<div class="page" id="page-contact">
-		<div class="window">
-      <div class="titleBar">
-        <div class="trafficLights">
-        <div class="trafficLight close" ></div>
-          <div class="trafficLight min" ></div>
-          <div class="trafficLight max" ></div>
-        </div>
-        <div class="title">Contact</div>
-      </div>
+		<div class="window page" id="page-contact">
+      <?php $windowTitle="Contact" ?>
+    <?php include 'windowheader.php';?>
       <div class="contentArea">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Contact</h1>
@@ -654,8 +647,6 @@ if(parent==top) {
   $('a.article').show();
 }
 </script>
-
-			</div>
 			</div>
 		</div>
 	<!-- page_Contact -->
