@@ -16,10 +16,11 @@
 
 <body>
 <?php include 'navigation.php';?>
-
+<?php include 'page/gallerybuffer.php';?>
 <div class="pages-stack">
 		
 <?php $pageStyle="page"?>
+
 <?php include 'page/photosfiles.php';?>
 
 <?php $pageStyle="page page--inactive"?>
