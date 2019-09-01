@@ -333,7 +333,8 @@ html.js,
 .contentArea {
     border-radius: 0 0 5px 5px;
     color: #bb1d48;
-	overflow: auto;
+	overflow-x: hidden;
+    overflow-y: auto;
     height: 95vh;
 	padding-bottom: 70px;
 }
@@ -538,4 +539,35 @@ b.effect-box:hover:before {
     .poster {
         margin: 1em;
     }
+}
+
+.window header{
+        cursor: move;
+}
+.closebutton {
+  color: #820005;
+  visibility: hidden;
+  cursor: default;
+  position: absolute;
+    margin-top: -3px;
+    margin-left: -5px;
+}
+.minimizebutton {
+  color: #9a5518;
+  visibility: hidden;
+  cursor: default;
+  position: absolute;
+    margin-top: -3px;
+    margin-left: -5px;
+}
+.zoombutton {
+  color: #006519;
+  visibility: hidden;
+  cursor: default;
+  position: absolute;
+    margin-top: -2px;
+    margin-left: -5px;
+}
+.trafficLight:hover .zoombutton,.trafficLight:hover .minimizebutton,.trafficLight:hover .closebutton{
+    visibility: visible;
 }
