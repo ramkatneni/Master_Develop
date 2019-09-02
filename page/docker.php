@@ -9,7 +9,7 @@
 <div id="dock-container">
  <div id="dock">
    <ul>
-      <li  id="openMenuBtn"  class="tooltipwrap">
+      <li  id="launchpadicon"  class="tooltipwrap">
 
       <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Menu</div></div>
         <a href="#"  ><img src="icons/menu.svg"></a>
@@ -77,6 +77,7 @@
 $(document).ready(function(){
   $("#openMenuBtn").click(function(){
 	  console.log("goto menu");
+    launchpadclose();
 	  $(".menu-button").click();
   });
 });
