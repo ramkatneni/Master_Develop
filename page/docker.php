@@ -39,7 +39,7 @@
        <li  class="tooltipwrap">
        <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Mail</div></div>
 
-        <a href="#"><img src="icons/github.svg"/></a>
+        <a href="mailme.php"><img src="icons/github.svg"/></a>
       </li>
         <li  class="tooltipwrap">
         <div class="tooltip top"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">iTunes</div></div>
